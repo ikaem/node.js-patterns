@@ -1,0 +1,16 @@
+{
+  "name": "implementation",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "radnom-stream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^1.1.8"
+  }
+}

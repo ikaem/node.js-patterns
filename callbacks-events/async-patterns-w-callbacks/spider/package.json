@@ -1,0 +1,19 @@
+{
+  "name": "spider",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "spider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mkdirp": "^1.0.2",
+    "mkdirp": "^1.0.4",
+    "slug": "^5.2.0",
+    "superagent": "^7.0.2"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "NAME": "EXAMPLE",
+  "VERSION": "1.0.0",
+  "TYPE": "MODULE",
+  "DESCRIPTION": "",
+  "MAIN": "EXAMPLE.JS",
+  "SCRIPTS": {
+    "TEST": "ECHO \"ERROR: NO TEST SPECIFIED\" && EXIT 1"
+  },
+  "KEYWORDS": [],
+  "AUTHOR": "",
+  "LICENSE": "ISC"
+}
+{
+  "NAME": "EXAMPLE",
+  "VERSION": "1.0.0",
+  "TYPE": "MODULE",
+  "DESCRIPTION": "",
+  "MAIN": "EXAMPLE.JS",
+  "SCRIPTS": {
+    "TEST": "ECHO \"ERROR: NO TEST SPECIFIED\" && EXIT 1"
+  },
+  "KEYWORDS": [],
+  "AUTHOR": "",
+  "LICENSE": "ISC"
+}
+{
+  "NAME": "EXAMPLE",
+  "VERSION": "1.0.0",
+  "TYPE": "MODULE",
+  "DESCRIPTION": "",
+  "MAIN": "EXAMPLE.JS",
+  "SCRIPTS": {
+    "TEST": "ECHO \"ERROR: NO TEST SPECIFIED\" && EXIT 1"
+  },
+  "KEYWORDS": [],
+  "AUTHOR": "",
+  "LICENSE": "ISC"
+}
+{
+  "NAME": "EXAMPLE",
+  "VERSION": "1.0.0",
+  "TYPE": "MODULE",
+  "DESCRIPTION": "",
+  "MAIN": "EXAMPLE.JS",
+  "SCRIPTS": {
+    "TEST": "ECHO \"ERROR: NO TEST SPECIFIED\" && EXIT 1"
+  },
+  "KEYWORDS": [],
+  "AUTHOR": "",
+  "LICENSE": "ISC"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "implementation",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "to-file-stream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^1.0.4"
+  }
+}

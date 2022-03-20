@@ -8,7 +8,9 @@
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { webpack } from 'webpack';
+import HtmlWebpackRootPlugin from 'html-webpack-root-plugin';
+console.log('html', new HtmlWebpackRootPlugin());
+// import { webpack } from 'webpack';
 import { argv } from 'process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -27,39 +29,81 @@ const config = () => {
       publicPath: '/',
       //   filename: 'main.js',
       // TODO this is mine. testing with has
-      filename: 'main.[hash].js',
+      // filename: 'main.[hash].js',
+      // cannot have hash bc serverside uses it, and we dont use serverside with webpack
+      filename: 'main.js',
     },
-    devServer: {
-      open: true,
-      host: 'localhost',
-    },
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: 'index.html',
-      }),
+    // TODO these are defaults, I like this
+    // devServer: {
+    //   open: true,
+    //   host: 'localhost',
+    // },
+    // plugins: [
+    //   new HtmlWebpackPlugin({
+    //     template: 'index.html',
+    // TODO i could use this instead, and set root there?
+    //   }),
 
-      // Add your plugins here
-      // Learn more about plugins from https://webpack.js.org/configuration/plugins/
-    ],
+    //   // Add your plugins here
+    //   // Learn more about plugins from https://webpack.js.org/configuration/plugins/
+    // ],
     module: {
       rules: [
         //   tghis is default
         {
           test: /\.(js|jsx)$/i,
+          exclude: /(node_modules|bower_components)/,
+          loader: 'babel-loader',
+          // use: {
+          // loader: 'babel-loader',
+          // options: {
+          //   presets: ['@babel/preset-env', '@babel/preset-react'],
+          //   plugins: ['@babel/plugin-transform-runtime'],
+          // },
+          // },
           //   THIS IS default
           //   loader: 'babel-loader',
           //   TODO stopped here
           //   https://github.com/PacktPublishing/Node.js-Design-Patterns-Third-Edition/blob/master/10-universal-javascript/07-frontend-only-app/webpack.config.cjs
         },
-        {
-          test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-          type: 'asset',
-        },
+        // THIS IS FOR ASSETS
+        // {
+        //   test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        //   type: 'asset',
+        // },
 
         // Add your rules for custom modules here
         // Learn more about loaders from https://webpack.js.org/loaders/
       ],
     },
+    // TODO what is eval
+    // this is build time effecting also
+    devtool: isProd ? 'source-maps' : 'eval',
+    devServer: {
+      historyApiFallback: true,
+      open: true,
+    },
+    // TODO this is now optimized by default iwth default config, I think
+    // optimization: isProd
+    //   ? {
+    //       minimize: true,
+    //       minimizer: [new TerserPlugin()],
+    //     }
+    //   : {},
+    plugins: isProd
+      ? []
+      : [
+          new HtmlWebpackPlugin({
+            title: 'My library',
+            templateContent: `<html>
+            <body>
+              <div id="root"></div>
+            </body>
+          </html>`,
+          }),
+          // TODO lets try without this for now
+          // new HtmlWebpackRootPlugin(),
+        ],
   };
 };
 

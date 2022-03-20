@@ -6,6 +6,8 @@
       {
         "modules": false
       }
-    ]
+    ],
+    // https://stackoverflow.com/questions/63005011/support-for-the-experimental-syntax-jsx-isnt-currently-enabled
+    "@babel/preset-react"
   ]
 }

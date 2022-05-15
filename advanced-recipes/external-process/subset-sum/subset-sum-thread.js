@@ -1,3 +1,4 @@
+import cluster from 'cluster';
 import { EventEmitter } from 'events';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';

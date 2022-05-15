@@ -1,0 +1,2 @@
+2022/05/14 12:05:09 [emerg] 3448#3128: CreateDirectory() "C:\Development\node.js-patterns\distributed-systems\nginx/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2022/05/14 12:06:08 [emerg] 6816#5972: CreateFile() "C:/dev/stderr" failed (3: The system cannot find the path specified)
